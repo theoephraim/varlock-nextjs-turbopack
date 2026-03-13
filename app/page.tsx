@@ -7,7 +7,6 @@ export default function Home() {
         <div>
           <ul>
             <li>{process.env.FOO_ITEM}</li>
-            <li>{process.env.SECRET_ITEM} (leak detection doesnt work w/ turbopack)</li>
             <li>{process.env.ENV_SPECIFIC_ITEM}</li>
           </ul>
         </div>
