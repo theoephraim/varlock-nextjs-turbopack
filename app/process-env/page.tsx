@@ -4,6 +4,7 @@ export default function ServerOnlyPage() {
   console.log("Env vars", {
     ENV_SPECIFIC_ITEM: process.env.ENV_SPECIFIC_ITEM,
     VAR_FROM_UI: process.env.VAR_FROM_UI,
+    SECRET_ITEM: process.env.SECRET_ITEM,
   });
 
   return (
@@ -14,6 +15,7 @@ export default function ServerOnlyPage() {
           <ul>
             <li>ENV_SPECIFIC_ITEM = {process.env.ENV_SPECIFIC_ITEM}</li>
             <li>VAR_FROM_UI = {process.env.VAR_FROM_UI}</li>
+            <li>SECRET_ITEM = {process.env.SECRET_ITEM}</li>
           </ul>
         </div>
       </main>
