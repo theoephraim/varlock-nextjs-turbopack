@@ -5,9 +5,6 @@ import path from "path";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export',
-  turbopack: {
-  },
 };
 
 export default varlockNextConfigPlugin()(nextConfig);

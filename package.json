@@ -1,6 +1,6 @@
 {
   "name": "next-with-turbopack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,12 +8,13 @@
     "start": "APP_ENV=prod next start",
     "lint": "eslint"
   },
+  
   "dependencies": {
     "@varlock/nextjs-integration": "https://pkg.pr.new/@varlock/nextjs-integration@393",
     "next": "16.1.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "varlock": "https://pkg.pr.new/varlock@393"
+    "varlock": "0.4.2"
   },
   "pnpm": {
     "overrides": {
