@@ -11,6 +11,7 @@ export function proxy(_request: NextRequest) {
     SECRET_ITEM: ENV.SECRET_ITEM,
     VAR_FROM_UI: ENV.VAR_FROM_UI,
   });
+  console.log(ENV.SECRET_ITEM);
 }
 
 export const config = {
