@@ -1,7 +1,15 @@
 import type { NextRequest } from 'next/server';
-import { ENV, getRedactionMapInfo } from 'varlock/env';
+import { ENV, getRedactionMapInfo, redactSensitiveConfig } from 'varlock/env';
 
 export function proxy(_request: NextRequest) {
+
+  // Test 1: call redactSensitiveConfig directly
+  console.log('direct redact:', redactSensitiveConfig('shhh-im-secret'));
+
+  // Test 2: check if replaceAll exists on strings in this runtime
+  console.log('has replaceAll:', typeof String.prototype.replaceAll);
+
+  console.log('re-patching console.log')
   console.log('console.log in proxy:', console.log);
 
   console.log(getRedactionMapInfo());
