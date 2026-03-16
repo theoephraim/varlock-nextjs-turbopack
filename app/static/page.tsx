@@ -2,6 +2,8 @@ import { ENV } from 'varlock/env';
 
 export default async function StaticPage() {
   
+  console.log(console.log);
+  console.log(new Error().stack);
   console.log("ENV.x", {
     ENV_SPECIFIC_ITEM: ENV.ENV_SPECIFIC_ITEM,
     VAR_FROM_UI: ENV.VAR_FROM_UI,

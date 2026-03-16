@@ -1121,7 +1121,7 @@ packages:
     os: [win32]
 
   '@varlock/nextjs-integration@file:.packed/varlock-nextjs-integration-0.2.3.tgz':
-    resolution: {integrity: sha512-R9m1lmhKUD9EGpQfqz4uZpz07gMjFXCw77S8bZs9bSF4FM4au2HRSmF4IHPVXTPaj9DlV0tHWPknuHukKcrbeg==, tarball: file:.packed/varlock-nextjs-integration-0.2.3.tgz}
+    resolution: {integrity: sha512-3szoUe65bqUQ+KGioYyd+Sc1Mg6Rts9++Lhr+3Weu035CgBTYEicmYzzOUMK+L9UsSugeiAn1LJWavJKO5p0eQ==, tarball: file:.packed/varlock-nextjs-integration-0.2.3.tgz}
     version: 0.2.3
     engines: {node: '>=22'}
     peerDependencies:
@@ -2980,7 +2980,7 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
   varlock@file:.packed/varlock-0.5.0.tgz:
-    resolution: {integrity: sha512-AMW657zK/i1b45gWW9C8eiLzIoc7m7vHInKwuYLkHVHoR+mRhaKyoWAqaEOyHVCKtZmvwWoWf9910symmees6Q==, tarball: file:.packed/varlock-0.5.0.tgz}
+    resolution: {integrity: sha512-gp28Kry3Tvqg0MssXYzM+bDUK+MO1YhLZVCSoJ3+ubnT9/xBSV2Ju8MyN+7Cw1R1RZoNHBLykAeorHvAXYXhLw==, tarball: file:.packed/varlock-0.5.0.tgz}
     version: 0.5.0
     engines: {bun: '>=1.3.3', node: '>=22'}
     hasBin: true

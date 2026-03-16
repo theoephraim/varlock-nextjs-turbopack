@@ -3,9 +3,10 @@
   "version": "0.1.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "pnpm run dev:webpack",
     "dev:webpack": "next dev --webpack",
-    "build": "APP_ENV=prod next build",
+    "dev:turbopack": "next dev",
+    "build": "pnpm run build:webpack",
     "build:webpack": "APP_ENV=prod next build --webpack",
     "build:turbopack": "APP_ENV=prod next build",
     "start": "APP_ENV=prod next start",

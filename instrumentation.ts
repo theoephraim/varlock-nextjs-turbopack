@@ -7,9 +7,9 @@ console.log('instrumentation.ts -- module loaded!');
 export async function register() {
   console.log('instrumentation.ts -- register!');
 
-  if (process.env.NEXT_RUNTIME === 'edge') {
-    await import('varlock/init-edge');
-  } else {
-    await import('varlock/init-server');
-  }
+  // if (process.env.NEXT_RUNTIME === 'edge') {
+  //   await import('varlock/init-edge');
+  // } else {
+  //   await import('varlock/init-server');
+  // }
 }
