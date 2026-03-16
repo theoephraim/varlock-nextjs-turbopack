@@ -9,18 +9,21 @@
     "build:webpack": "APP_ENV=prod next build --webpack",
     "build:turbopack": "APP_ENV=prod next build",
     "start": "APP_ENV=prod next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "use:packed": "./scripts/pack-local.sh",
+    "use:linked": "./scripts/use-linked.sh",
+    "deploy:local": "./scripts/deploy-local.sh"
   },
   "dependencies": {
-    "@varlock/nextjs-integration": "https://pkg.pr.new/@varlock/nextjs-integration@393",
+    "@varlock/nextjs-integration": "file:.packed/varlock-nextjs-integration-0.2.3.tgz",
     "next": "16.1.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "varlock": "https://pkg.pr.new/varlock@393"
+    "varlock": "file:.packed/varlock-0.5.0.tgz"
   },
   "pnpm": {
     "overrides": {
-      "@next/env": "$@varlock/nextjs-integration"
+      "@next/env": "file:.packed/varlock-nextjs-integration-0.2.3.tgz"
     }
   },
   "devDependencies": {
@@ -31,6 +34,7 @@
     "baseline-browser-mapping": "^2.10.7",
     "eslint": "^10",
     "eslint-config-next": "^16",
+    "vercel": "^50.32.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

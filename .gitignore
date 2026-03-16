@@ -45,3 +45,4 @@ next-env.d.ts
 !.env.schema
 
 *.ignore.*
+# .packed/ # we do want to send these
