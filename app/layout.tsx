@@ -20,12 +20,14 @@ export const metadata: Metadata = {
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/env", label: "Env" },
-  { href: "/process-env", label: "Process Env" },
-  { href: "/leak", label: "Leak (safe)" },
-  { href: "/leak?leak", label: "Leak (leaked!)" },
-  { href: "/leak/api", label: "API (safe)" },
-  { href: "/leak/api?leak", label: "API (leaked!)" },
+  { href: "/static", label: "Static" },
+  { href: "/server", label: "Server" },
+  { href: "/edge", label: "Server (edge)" },
+  { href: "/server?leak", label: "Leak" },
+  { href: "/edge?leak", label: "Leak (edge)" },
+  { href: "/server-actions", label: "Server Actions" },
+  { href: "/api", label: "API (safe)" },
+  { href: "/api?leak", label: "API (leaked!)" },
 ];
 
 export default function RootLayout({

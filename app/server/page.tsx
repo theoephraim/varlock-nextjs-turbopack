@@ -1,11 +1,29 @@
 export const dynamic = "force-dynamic";
 import { ENV } from 'varlock/env';
+import { ServerResponse } from 'node:http';
 
-export default function ServerOnlyPage() {
-  console.log("Env vars", {
+export default async function ServerOnlyPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ leak?: string }>;
+}) {
+  const { leak } = await searchParams;
+  const shouldLeak = leak !== undefined;
+
+  console.log('instrumentation set in globalThis:', (globalThis as any).SET_IN_INSTRUMENTATION);
+
+
+  console.log(ServerResponse, ServerResponse.prototype); // @ts-ignore
+
+  console.log("ENV.x", {
     ENV_SPECIFIC_ITEM: ENV.ENV_SPECIFIC_ITEM,
     VAR_FROM_UI: ENV.VAR_FROM_UI,
     SECRET_ITEM: ENV.SECRET_ITEM,
+  });
+  console.log("process.env.x", {
+    ENV_SPECIFIC_ITEM: process.env.ENV_SPECIFIC_ITEM,
+    VAR_FROM_UI: process.env.VAR_FROM_UI,
+    SECRET_ITEM: process.env.SECRET_ITEM,
   });
 
   return (
@@ -13,6 +31,11 @@ export default function ServerOnlyPage() {
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <div>
           <h1 className="text-2xl font-bold mb-4">Server Only Page</h1>
+
+          {shouldLeak ? (
+              <p>SECRET_ITEM = <code>{ENV.SECRET_ITEM}</code></p>
+          ) : ''}
+
           <ul>
             <li>ENV_SPECIFIC_ITEM = {ENV.ENV_SPECIFIC_ITEM}</li>
             <li>VAR_FROM_UI = {ENV.VAR_FROM_UI}</li>
